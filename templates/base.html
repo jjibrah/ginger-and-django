@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+
+</head>
+<body>
+<section>
+    <div class = "navigation-section-container">
+        <nav class="navigation">
+            <a href="{% url 'my-home' %}"><button>Home</button></a>
+            <a href="{% url 'my-about' %}"><button>About</button></a>
+            <a href="{% url 'my-gallery' %}"><button>gallery</button></a>
+            <a href="{% url 'my-courses' %}"><button>courses</button></a>
+            <a href="/register"><button>register</button></a>
+            <a href="/login"><button>login</button></a>
+        </nav>
+    </div>
+</section>
+{% block content %}
+
+{% endblock %}
+</body>
+</html>

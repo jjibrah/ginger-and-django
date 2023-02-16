@@ -1,0 +1,28 @@
+__________________________________________
+NOTES ON THE LESSON AND PROJECT 15/2/2023
+------------------------------------------
+# in the base html file
+
+first link using ginger
+put your content for all pages there
+add a ginger block tag:
+{% block content %}
+{% endblock %}
+
+# in the other html files
+extend the ginger to the base html file
+write a :
+{% extends 'base.html' %}
+write a :
+{% block content %}
+Then put the content for that page here
+{% endblock %}
+
+
+*******************************************
+its more secure to use the name than the route name
+*******************************************
+instead of writing the :
+/about
+you can use ginger and write the name allocated:
+"{% url 'my-home' %}"
